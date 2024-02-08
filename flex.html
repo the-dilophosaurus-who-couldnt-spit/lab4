@@ -17,104 +17,77 @@ Description : Flex Layouts.
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<style>	
-		/* Remove borders at the end, they have been add just for detecting positions of items*/	
-		div {
-			border: 1px dashed gray;	
-		}
-		.row{ 
-			border: 1px solid red;			
-		}
-		.large {
-			border: 1px solid blue;	
-		}
-		.medium {
-			border: 1px solid green;	
-		}
-		.small {
-			border: 1px solid yellow;	
-		}		
-	</style>
-
-	<style>
-		/* CSS for menu. You don't need to touch this part */
-		.menu { background-color: #e6e6e6; }
-        .menu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
-		.menu ul li {
-			padding: 5px 0;
-		}
-        .menu ul li a {
-            padding: 10px;
-            text-decoration: none;
-            color: #315eff;
-        }
-	</style>
-
 	<style>
 		* {
-			/*
-			To have the borders included in the total width calculation of your elements,
-			so that a 70% width and a 30% width element truly add up to 100% including their borders,
-			Apply border-box to all elements
-			*/
 			box-sizing: border-box;
 		}
         body { margin: 0; padding: 0; }
         img { max-width: 100%; height: auto; }
         .container { 
-			/*I need some CSS codes.*/
+			display: flex;
+        	flex-direction: column;
+        	align-items: center;
+			
 		 }
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
 		.body { 
-			/*I need some CSS codes.*/
+			display: flex;
+        	flex-direction: row;
 		}
         .main { 
 			padding: 15px; 
-			/*I need some CSS codes.*/
+			width: 100%;
 		}
         
         .news-item { padding: 10px; }
         .row { 
-			/*I need some CSS codes.*/
+			display: flex;
+			flex-wrap: wrap;
 		}
         
 
         @media screen and (min-width: 769px) {
-            .menu { width: 150px; }     
+            .menu { 
+				width: 150px;
+			}     
 			.large { 
-				/*I need some CSS codes.*/
+				width: 100%;
 			}
 			.medium { 
-				/*I need some CSS codes.*/
+				width: 70%;
 			}
 			.small { 
-				/*I need some CSS codes.*/
+				width: 30%;
 			 }       
         }
 
         @media screen and (max-width: 768px) {
 			.body { 
-				/*I need some CSS codes.*/
+				flex-direction: column;
 			}
             .menu ul { 
-				/*I need some CSS codes.*/
-			 }            
-            /*I need some CSS codes.*/
+            	flex-direction: row;
+			 }  
+			 
+			.large { 
+				width: 100%;
+			}
+			.medium { 
+				width: 60%;
+			}
+			.small { 
+				width: 40%;
+			 }    
         }
 
         @media screen and (max-width: 480px) {
             .news-item header h1 { font-size: 18px; }
             .medium, .small { 
-				/*I need some CSS codes.*/
+				width: 100%;
 			 }
         }
     </style>
+
 </head>
 <body>
     <div class="container">
