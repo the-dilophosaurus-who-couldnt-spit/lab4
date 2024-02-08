@@ -48,19 +48,22 @@ Description : Responsive Layouts.
         .news-item { padding: 10px; }
 		
 		.row { 
-			/*I need some CSS codes.*/		
+			overflow: hidden;
+			margin-bottom: 20px;
 		}
 
 		.large, .medium, .small {
-			/*I need some CSS codes.*/
+			float: left;
+			width: 100%
 		}
 		
 		.gap {
-			/*I need some CSS codes.*/
+			height: 100px;
 		}
 
 		@media screen and (min-width: 769px) {			
 			.large { 
+<<<<<<< HEAD
 				width: 100%;
 			}
 			.medium { 
@@ -101,6 +104,28 @@ Description : Responsive Layouts.
         	.header h1 {
             	font-size: 18px; /* Reduce font size of h1 headers */
         	}
+=======
+				width: 50%
+			}
+			.medium { 
+				width: 50%
+			}
+			.small { 
+				width: 100%
+			 }
+		}
+
+        @media screen and (max-width: 768px) {
+            .large, .medium, .small{
+				width: 100%
+			}
+        }
+
+        @media screen and (max-width: 480px) {
+			.large, .medium, .small{
+				width: 100%
+			}
+>>>>>>> a8139bd12f4a0ffc199886339c9b2ec664df9f05
         }
 
         
