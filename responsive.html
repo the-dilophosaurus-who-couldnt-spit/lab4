@@ -19,112 +19,73 @@ Description : Responsive Layouts.
 
 	<!-- First, link the menu.css file here -->
 	<link rel="responsive" href="menu.css">
-	<style>	
-		/* Remove borders at the end (after all other changes), they have been added just for detecting positions of items*/	
-		div {
-			border: 1px dashed gray;	
-		}
-		.row{ 
-			border: 1px solid red;			
-		}
-		.large {
-			border: 1px solid blue;	
-		}
-		.medium {
-			border: 1px solid green;	
-		}
-		.small {
-			border: 1px solid yellow;	
-		}		
-	</style>
 
-    <style>
-		body { margin: 0; padding: 0;}
-		img { max-width: 100%; height: auto; }
+	<style>
+        body { margin: 0; padding: 0;}
+        img { max-width: 100%; height: auto; }
         .container { width: 100%;}
-        .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }        
-        .main { padding: 15px; margin-left: 150px;}		
+        .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }
+        .main { padding: 15px; margin-left: 150px;}
         .footer { position: fixed; bottom: 0; width: 100%;}
         .news-item { padding: 10px; }
-		
-		.row { 
-			overflow: hidden;
-			margin-bottom: 20px;
-		}
 
-		.large, .medium, .small {
-			float: left;
-			width: 100%
-		}
-		
-		.gap {
-			height: 100px;
-		}
+        .row { 
+            display: table;
+            clear:both;
+            width: 100%
+        }
 
-		@media screen and (min-width: 769px) {			
-			.large { 
-				width: 100%;
-			}
-			.medium { 
-				width: 70%;
-			}
-			.small { 
-				width: 30%;
-			}
-			 .gap {
-				height: 60px; /* Adjust this value as needed */
-    		}
-		}
+        .large, .medium, .small {
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            width: 100%;
+            float: left;
+        }
+
+        .gap {
+            clear: both;
+            height: 20px;
+        }
+
+        @media screen and (min-width: 769px) {
+            .large { 
+                width: 100%;
+            }
+            .medium { 
+                width: 70%;
+            }
+            .small { 
+                width: 30%;
+             }
+        }
 
         @media screen and (max-width: 768px) {
             .large { 
-				width: 100%;
-			}
-			.medium { 
-				width: 60%;
-			}
-			.small { 
-				width: 40%;
-			}
-			.header {
-            	margin-left: 0; /* Remove margin for header on tablets */
-        	}
-        	.main {
-            	margin-left: 0; /* Remove margin for main content on tablets */
-        	}
+                width: 100%;
+            }
+            .medium { 
+                width: 60%;
+            }
+            .small {
+                width: 40%;
+             }
+             .menu{
+                width: 100%;
+             }
         }
 
         @media screen and (max-width: 480px) {
-			.large,
-        	.medium,
-        	.small {
-            	width: 100%; /* Set width to 100% for all items */
-        	}
-        	.header h1 {
-            	font-size: 18px; /* Reduce font size of h1 headers */
-        	}
-			.large{
-				width: 50%
-			}
-			.medium { 
-				width: 50%
-			}
-			.small { 
-				width: 100%
-			 }
-		}
-
-        @media screen and (max-width: 768px) {
-            .large, .medium, .small{
-				width: 100%
-			}
-        }
-
-        @media screen and (max-width: 480px) {
-			.large, .medium, .small{
-				width: 100%
-			}
-        }
+            .large { 
+                width: 100%;
+            }
+            .medium { 
+                width: 100%;
+            }
+            .small { 
+                width: 100%;
+             }
+    }
+    </style>
 
         
     </style>
